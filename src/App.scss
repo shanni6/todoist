@@ -427,23 +427,40 @@ header {
     }
 }
 
-/* Show Confirm Delete
+/* Show Confirm Delete --changes on july 28
   ============================================ */
 .project-delete-modal {
     position: relative;
-
-
-
-.project-delete-modal__inner{
-    @include box-overlay();
-    display: block;
-    left: -120px;
-    z-index: 99;
-       // width: 100%;
-        padding: 5px;
+&__inner {
+        @include box-overlay();
+        width: 200px !important;
+        flex-direction: column;
+        z-index: 99 !important;
+        padding: 20px;
+        right: 0;
         top: 10px;
-        background-color: white;
-}
+        background-color: #fff;
+
+        p {
+            margin-top: 5px;
+            margin-bottom: 5px;
+            line-height: normal;
+            font-weight: normal;
+            font-size: 15px;
+        }
+
+        button {
+            margin: 0 !important;
+            margin-bottom: 5px !important;
+            @include btn("50px");
+        }
+
+        span {
+            margin: 0 !important;
+            @include cancel();
+            font-weight: normal;
+        }
+    }
 }
 /* Main Content
   ============================================ */
